@@ -17,6 +17,17 @@ export default defineConfig(({ command, mode }) => {
       })
     ],
     
+    // Skip TypeScript checking during build
+    esbuild: {
+      logOverride: { 'this-is-undefined-in-esm': 'silent' },
+      ...(isProduction && {
+        drop: ['console', 'debugger'],
+        minifyIdentifiers: true,
+        minifySyntax: true,
+        minifyWhitespace: true,
+      }),
+    },
+    
     // Base URL for GitHub Pages deployment
     base: process.env.GITHUB_ACTIONS ? '/react-developer-assignment/' : '/',
     
@@ -149,16 +160,7 @@ export default defineConfig(({ command, mode }) => {
       },
     },
     
-    // ESBuild configuration
-    esbuild: {
-      logOverride: { 'this-is-undefined-in-esm': 'silent' },
-      ...(isProduction && {
-        drop: ['console', 'debugger'],
-        minifyIdentifiers: true,
-        minifySyntax: true,
-        minifyWhitespace: true,
-      }),
-    },
+
     
     // Worker configuration
     worker: {
