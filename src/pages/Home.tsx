@@ -141,12 +141,14 @@ const Home: React.FC = () => {
             }}
             className="card-hover"
             onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-4px) scale(1.05)'
-              e.target.style.boxShadow = '0 15px 40px rgba(16, 185, 129, 0.5)'
+              const target = e.currentTarget as HTMLElement
+              target.style.transform = 'translateY(-4px) scale(1.05)'
+              target.style.boxShadow = '0 15px 40px rgba(16, 185, 129, 0.5)'
             }}
             onMouseLeave={(e) => {
-              e.target.style.transform = 'translateY(0) scale(1)'
-              e.target.style.boxShadow = '0 8px 30px rgba(16, 185, 129, 0.4)'
+              const target = e.currentTarget as HTMLElement
+              target.style.transform = 'translateY(0) scale(1)'
+              target.style.boxShadow = '0 8px 30px rgba(16, 185, 129, 0.4)'
             }}
           >
             <span style={{ marginRight: '0.5rem', fontSize: '1.3rem' }}>🏢</span>
@@ -172,12 +174,14 @@ const Home: React.FC = () => {
             }}
             className="card-hover"
             onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-4px) scale(1.05)'
-              e.target.style.boxShadow = '0 15px 40px rgba(102, 126, 234, 0.5)'
+              const target = e.currentTarget as HTMLElement
+              target.style.transform = 'translateY(-4px) scale(1.05)'
+              target.style.boxShadow = '0 15px 40px rgba(102, 126, 234, 0.5)'
             }}
             onMouseLeave={(e) => {
-              e.target.style.transform = 'translateY(0) scale(1)'
-              e.target.style.boxShadow = '0 8px 30px rgba(102, 126, 234, 0.4)'
+              const target = e.currentTarget as HTMLElement
+              target.style.transform = 'translateY(0) scale(1)'
+              target.style.boxShadow = '0 8px 30px rgba(102, 126, 234, 0.4)'
             }}
           >
             <span style={{ marginRight: '0.5rem', fontSize: '1.3rem' }}>🎨</span>
@@ -296,12 +300,14 @@ const Home: React.FC = () => {
                     transition: 'all 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(16, 185, 129, 0.1)'
-                    e.currentTarget.style.transform = 'translateX(5px)'
+                    const target = e.currentTarget as HTMLElement
+                    target.style.backgroundColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(16, 185, 129, 0.1)'
+                    target.style.transform = 'translateX(5px)'
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = isDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(16, 185, 129, 0.05)'
-                    e.currentTarget.style.transform = 'translateX(0)'
+                    const target = e.currentTarget as HTMLElement
+                    target.style.backgroundColor = isDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(16, 185, 129, 0.05)'
+                    target.style.transform = 'translateX(0)'
                   }}
                   >
                     <span style={{ fontSize: '1.5rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}>
@@ -337,12 +343,14 @@ const Home: React.FC = () => {
                 overflow: 'hidden'
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = 'translateY(-3px) scale(1.02)'
-                e.target.style.boxShadow = '0 12px 30px rgba(16, 185, 129, 0.4)'
+                const target = e.currentTarget as HTMLElement
+                target.style.transform = 'translateY(-3px) scale(1.02)'
+                target.style.boxShadow = '0 12px 30px rgba(16, 185, 129, 0.4)'
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0) scale(1)'
-                e.target.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.3)'
+                const target = e.currentTarget as HTMLElement
+                target.style.transform = 'translateY(0) scale(1)'
+                target.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.3)'
               }}
             >
               <span style={{ marginRight: '0.5rem', fontSize: '1.2rem' }}>🚀</span>
@@ -449,12 +457,14 @@ const Home: React.FC = () => {
                     transition: 'all 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(102, 126, 234, 0.1)'
-                    e.currentTarget.style.transform = 'translateX(5px)'
+                    const target = e.currentTarget as HTMLElement
+                    target.style.backgroundColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(102, 126, 234, 0.1)'
+                    target.style.transform = 'translateX(5px)'
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = isDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(102, 126, 234, 0.05)'
-                    e.currentTarget.style.transform = 'translateX(0)'
+                    const target = e.currentTarget as HTMLElement
+                    target.style.backgroundColor = isDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(102, 126, 234, 0.05)'
+                    target.style.transform = 'translateX(0)'
                   }}
                   >
                     <span style={{ fontSize: '1.5rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}>
@@ -490,12 +500,14 @@ const Home: React.FC = () => {
                 overflow: 'hidden'
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = 'translateY(-3px) scale(1.02)'
-                e.target.style.boxShadow = '0 12px 30px rgba(102, 126, 234, 0.4)'
+                const target = e.currentTarget as HTMLElement
+                target.style.transform = 'translateY(-3px) scale(1.02)'
+                target.style.boxShadow = '0 12px 30px rgba(102, 126, 234, 0.4)'
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0) scale(1)'
-                e.target.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.3)'
+                const target = e.currentTarget as HTMLElement
+                target.style.transform = 'translateY(0) scale(1)'
+                target.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.3)'
               }}
             >
               <span style={{ marginRight: '0.5rem', fontSize: '1.2rem' }}>🎯</span>

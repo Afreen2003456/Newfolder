@@ -29,7 +29,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   }, [isDarkMode])
 
   const toggleDarkMode = () => {
-    setIsDarkMode(prev => !prev)
+    setIsDarkMode((prev: boolean) => !prev)
   }
 
   return (

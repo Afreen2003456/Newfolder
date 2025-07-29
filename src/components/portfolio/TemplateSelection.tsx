@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowLeft, Check, Star, Layout, Grid, Timeline, MessageSquare } from 'lucide-react'
+import { ArrowLeft, Check, Star, Layout, Grid, Clock, MessageSquare } from 'lucide-react'
 
 interface TemplateSelectionProps {
   onTemplateSelect: (template: 'template1' | 'template2') => void

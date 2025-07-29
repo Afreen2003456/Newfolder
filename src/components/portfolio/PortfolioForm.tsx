@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { usePortfolio, PortfolioData } from '../../contexts/PortfolioContext'
-import { ArrowLeft, ArrowRight, Check, Plus, Trash2, User, Mail, Phone, MapPin, Star, Briefcase, FolderOpen, MessageSquare, BookOpen, Send } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Check, Plus, Trash2, User, Star, Briefcase, FolderOpen, MessageSquare, BookOpen, Send } from 'lucide-react'
 
 interface PortfolioFormProps {
   template: 'template1' | 'template2'

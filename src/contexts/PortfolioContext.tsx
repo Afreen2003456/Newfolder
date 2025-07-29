@@ -53,16 +53,80 @@ export interface Education {
 }
 
 export interface PortfolioData {
+  id?: string
+  template?: string
   personalInfo: PersonalInfo
   skills: Skill[]
   projects: Project[]
   experience: Experience[]
   education: Education[]
   selectedTemplate: string
+  hero?: {
+    name: string
+    title: string
+    subtitle?: string
+    tagline?: string
+    profileImage?: string
+  }
+  about?: {
+    description: string
+    bio?: string
+    image?: string
+    email: string
+    phone: string
+    location: string
+    website?: string
+    socials?: {
+      linkedin?: string
+      github?: string
+      twitter?: string
+      website?: string
+    }
+  }
+  services?: Array<{
+    id: string
+    title: string
+    description: string
+    icon?: string
+  }>
+  portfolio?: Project[]
+  testimonials?: Array<{
+    id: string
+    name: string
+    role: string
+    company: string
+    content: string
+    quote?: string
+    image?: string
+  }>
+  blog?: Array<{
+    id: string
+    title: string
+    excerpt: string
+    date: string
+    image?: string
+    url?: string
+  }> & {
+    title?: string
+    summary?: string
+  }
+  contact?: {
+    email: string
+    phone: string
+    location: string
+    website?: string
+    message?: string
+  }
 }
 
 interface PortfolioContextType {
   portfolioData: PortfolioData
+  portfolios: PortfolioData[]
+  filteredPortfolios: PortfolioData[]
+  searchTerm: string
+  setSearchTerm: (term: string) => void
+  skillFilter: string
+  setSkillFilter: (filter: string) => void
   updatePersonalInfo: (info: Partial<PersonalInfo>) => void
   addSkill: (skill: Skill) => void
   updateSkill: (id: string, skill: Partial<Skill>) => void
@@ -77,6 +141,8 @@ interface PortfolioContextType {
   updateEducation: (id: string, education: Partial<Education>) => void
   removeEducation: (id: string) => void
   setSelectedTemplate: (template: string) => void
+  addPortfolio: (portfolio: Omit<PortfolioData, 'id'>) => void
+  getPortfolio: (id: string) => PortfolioData | undefined
 }
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(undefined)
